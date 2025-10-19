@@ -17,7 +17,7 @@
 
 Insufficient sanitization from Validity_check function leads to argument injection in `setDiagnosticCfg` and `setTracerouteCfg` components.
 
-The vulnerable code is found in `FUN_0041f1ac()` and `FUN_0041f0e4()` of cstecgi.cgi binary:
+The vulnerable code is found in `FUN_0041f1ac()` and `FUN_0041f0e4()` of the cstecgi.cgi firmware binary; in both functions the `ip_addr` buffer is populated directly from an HTTP request parameter:
 
 ![](imgs/1.png)
 
