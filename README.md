@@ -23,11 +23,11 @@ The vulnerable code is found in `FUN_0041f1ac()` and `FUN_0041f0e4()` of the cst
 
 ![](imgs/2.png)
 
-Injecting '#' character in the ip address field of the Diagnosis function via crafted HTTP request leads to the "Diagnosis" button becoming unresponsive, making such function indefinitely unavailable:
+Injecting the '#' character in the ip address field of the `Diagnosis` function via crafted HTTP request leads to the "Diagnosis" button becoming unresponsive, making such function indefinitely unavailable:
 
 ![](imgs/3.png)
 
-Injecting arbitrary arguments using '-' character in the ip address field of the Route Tracking function (or Diagnosis function) via crafted HTTP request leads to argument injection:
+Injecting arbitrary arguments using the '-' character in the ip address field of the `Route Tracking` function (or `Diagnosis` function) via crafted HTTP request leads to argument injection:
 
 ![](imgs/4.png)
 
