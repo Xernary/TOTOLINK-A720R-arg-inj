@@ -15,21 +15,21 @@
 
 ## Vulnerability details
 
-Insufficient sanitization from Validity_check function leads to argument injection in `setDiagnosticCfg` and `setTracerouteCfg` components.
+Insufficient sanitization from Validity_check function leads to argument injection in `setDiagnosisCfg` and `setTracerouteCfg` components.
 
-The vulnerable code is found in `FUN_0041f1ac()` and `FUN_0041f0e4()` of cstecgi.cgi binary:
+The vulnerable code is found in `FUN_0041f1ac()` and `FUN_0041f0e4()` of the cstecgi.cgi firmware binary; in both functions the `ip_addr` buffer is populated directly from an HTTP request parameter:
 
-![](imgs/1.jpeg)
+![](imgs/1.png)
 
-![](imgs/2.jpeg)
+![](imgs/2.png)
 
-Injecting '#' character in the ip address field of the Diagnosis function via crafted HTTP request leads to the "Diagnosis" button becoming unresponsive, making such function indefinitely unavailable:
+Injecting the '#' character in the ip address field of the `Diagnosis` function via crafted HTTP request leads to the "Diagnosis" button becoming unresponsive, making such function indefinitely unavailable:
 
-![](imgs/3.jpeg)
+![](imgs/3.png)
 
-Injecting arbitrary arguments using '-' character in the ip address field of the Route Tracking function (or Diagnosis function) via crafted HTTP request leads to argument injection:
+Injecting arbitrary arguments using the '-' character in the ip address field of the `Route Tracking` function (or `Diagnosis` function) via crafted HTTP request leads to argument injection:
 
-![](imgs/4.jpeg)
+![](imgs/4.png)
 
 
 
