@@ -1,6 +1,5 @@
 # CVE-2025-63821
 
-
 ## Submitter: Nicola Giuffrida
 
 ## Information
